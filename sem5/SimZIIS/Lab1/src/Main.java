@@ -17,6 +17,8 @@ public class Main {
         visualize(frequencyTable);
         long time = bruteForceAttackTime(password);
         System.out.printf("\nВремя подбора пароля: %d часов %d минут %d секунд", time/3600, time%3600/60, time%60);
+
+        timeLengthDepency();
     }
 
     public static String generatedString(int strLength) {
@@ -56,6 +58,27 @@ public class Main {
         var xData = new ArrayList(frequencyTable.keySet().stream().map(c -> Character.toString(c)).sorted().toList());
         var yData = new ArrayList(frequencyTable.values());
         chart.addSeries("char", xData, yData);
+
+        new SwingWrapper<>(chart).displayChart();
+    }
+
+    public static void timeLengthDepency(){
+        XYChart chart = new XYChartBuilder()
+                .width(800)
+                .height(600)
+                .title("Time/Length Dependency")
+                .xAxisTitle("Length")
+                .yAxisTitle("Time")
+                .build();
+
+        var timeData = new ArrayList<Long>(); //время
+        var lengthData = new ArrayList<Long>(); //длина
+
+        for(int i = 1; i <= 7; i++){
+            lengthData.add((long)i*2);
+            timeData.add(bruteForceAttackTime(generatedString(i*2)));
+        }
+        chart.addSeries("time/length", lengthData, timeData);
 
         new SwingWrapper<>(chart).displayChart();
     }
