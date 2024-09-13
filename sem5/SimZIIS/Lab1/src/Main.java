@@ -6,9 +6,18 @@ import org.knowm.xchart.style.Styler;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Введите длину строки: ");
         var sc = new Scanner(System.in);
-        int strLength = sc.nextInt();
+        int strLength = 0;
+        do {
+            System.out.print("Введите положительное число: ");
+            while (!sc.hasNextInt()) {
+                System.out.print("Ошибка: введите корректное число: ");
+                sc.next(); // Пропуск некорректного ввода
+            }
+            strLength = sc.nextInt();
+        } while (strLength <= 0);
+
+
 
         String password = generatedString(strLength);
         System.out.println("Ваш пароль: " + password);
@@ -20,7 +29,7 @@ public class Main {
 
         timeLengthDepency();
     }
-
+    //метод генерирующий строку произвольной длины
     public static String generatedString(int strLength) {
         var random = new Random();
         var genStr = new StringBuilder();
@@ -29,7 +38,7 @@ public class Main {
         }
         return genStr.toString();
     }
-
+    //метод генерирующий таблицу данных для графика
     public static HashMap<Character, Integer> frequencyTableInit(String password){
         var charFreqMap = new HashMap<Character, Integer>();
         for(char c : password.toCharArray()){
@@ -37,13 +46,13 @@ public class Main {
         }
         return charFreqMap;
     }
-
+    //метод вычисляющий время подбора пароля
     public static long bruteForceAttackTime(String password){
         long P = (long)Math.pow(33, password.length()); //количество возможных паролей
         long pasPerTime = (long)Math.pow(10,9); //скорость перебора
         return P/pasPerTime;
     }
-
+    //метод для визуализации частотного распределения
     public static void visualize(HashMap<Character, Integer> frequencyTable){
         CategoryChart chart = new CategoryChartBuilder().width(800).height(600)
                 .title("Char destribution")
@@ -61,7 +70,7 @@ public class Main {
 
         new SwingWrapper<>(chart).displayChart();
     }
-
+    //метод для визуализации зависимости времени подбора от длины пароля
     public static void timeLengthDepency(){
         XYChart chart = new XYChartBuilder()
                 .width(800)
