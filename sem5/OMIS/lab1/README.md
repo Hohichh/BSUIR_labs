@@ -48,30 +48,30 @@ CRM-модель — это модель взаимодействия, осно�
 
 ## Диаграмма ER
 
-![ER-диаграмма](diagrams/er2.png)
+![ER-диаграмма](https://github.com/Hohichh/BSUIR_labs/blob/main/sem5/OMIS/diagrams/er2.png)
 
 ## Диаграмма BPMN 
 
-![BPMN-диаграмма](diagrams/bpmn.png)
+![BPMN-диаграмма](https://github.com/Hohichh/BSUIR_labs/blob/main/sem5/OMIS/diagrams/bpmn.png)
 
 ## Диаграмма Use-Case
 
-![Use-case диаграмма](diagrams/use_Case.png)
+![Use-case диаграмма](https://github.com/Hohichh/BSUIR_labs/blob/main/sem5/OMIS/diagrams/use_Case.png)
 
 ## Диаграмма Sequence
 
-![Sequence диаграмма](diagrams/Sequence.png)
+![Sequence диаграмма](https://github.com/Hohichh/BSUIR_labs/blob/main/sem5/OMIS/diagrams/Sequence.png)
 
 ## Диаграмма Классов
 
-![model диаграмма](diagrams/model.png)
+![model диаграмма](https://github.com/Hohichh/BSUIR_labs/blob/main/sem5/OMIS/diagrams/model.png)
 
-![control диаграмма](diagrams/control.png)
+![control диаграмма](https://github.com/Hohichh/BSUIR_labs/blob/main/sem5/OMIS/diagrams/control.png)
 
-![view диаграмма](diagrams/view.png)
+![view диаграмма](https://github.com/Hohichh/BSUIR_labs/blob/main/sem5/OMIS/diagrams/view.png)
 
-![data_layer диаграмма](diagrams/data_layer.png)
+![data_layer диаграмма](https://github.com/Hohichh/BSUIR_labs/blob/main/sem5/OMIS/diagrams/data_layer.png)
 
-![диаграмма развития](diagrams/dev.png)
+![диаграмма развития](https://github.com/Hohichh/BSUIR_labs/blob/main/sem5/OMIS/diagrams/dev.png)
 
 ## Диаграмма направлений развития
