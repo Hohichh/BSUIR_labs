@@ -19,12 +19,26 @@
 -- WHERE prj.city = 'Лондон';
 
 
--- Задача №12: --
-SELECT q.product_id, 
-FROM quantities q
-JOIN suppliers s ON q.supplier_id = s.id
-JOIN projects p ON q.project_id = p.id
-WHERE s.city = p.city;
+--Задача №12: --
+-- SELECT q.product_id
+-- FROM quantities q
+-- JOIN suppliers s ON q.supplier_id = s.id
+-- JOIN projects p ON q.project_id = p.id
+-- WHERE s.city = p.city;
+
+-- SELECT q.product_id
+-- FROM quantities q
+-- JOIN suppliers s ON q.supplier_id = s.id
+-- JOIN projects p ON q.project_id = p.id
+-- WHERE s.city = p.city
+-- GROUP BY q.product_id
+-- HAVING COUNT(DISTINCT q.project_id) = (
+--         SELECT COUNT(DISTINCT p.id)
+--         FROM projects p
+--         JOIN suppliers s ON s.city = p.city
+--         JOIN quantities q ON q.project_id = p.id AND q.supplier_id = s.id
+--     );
+
 
 -- Задача №28: --       
 -- SELECT prj.id
@@ -48,6 +62,7 @@ WHERE s.city = p.city;
 -- JOIN products prd ON prd.id = product_id
 -- JOIN projects prj ON prj.id = project_id
 -- WHERE s.city != prd.city AND prd.city != prj.city AND s.city != prj.city;
+
 
 -- Задача №32: --
 -- SELECT q.project_id
@@ -78,5 +93,5 @@ WHERE s.city = p.city;
 -- Задача №18: --
 -- SELECT q.product_id
 -- FROM quantities q
--- GROUP BY q.product_id
+-- GROUP BY q.product_id, q.project_id
 -- HAVING AVG(q.quantity) > 320;
