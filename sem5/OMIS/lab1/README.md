@@ -60,7 +60,7 @@ CRM-модель — это модель взаимодействия, осно�
 
 ## Диаграмма Sequence
 
-![Sequence диаграмма](https://github.com/Hohichh/BSUIR_labs/blob/main/sem5/OMIS/diagrams/Sequence.png)
+![Sequence диаграмма](https://github.com/Hohichh/BSUIR_labs/blob/main/sem5/OMIS/diagrams/Sequence.svg)
 
 ## Диаграмма Классов
 
