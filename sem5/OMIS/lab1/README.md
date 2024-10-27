@@ -72,6 +72,8 @@ CRM-модель — это модель взаимодействия, осно�
 
 ![data_layer диаграмма](https://github.com/Hohichh/BSUIR_labs/blob/main/sem5/OMIS/diagrams/data_layer.png)
 
+## Диаграмма направлений развития
+
 ![диаграмма развития](https://github.com/Hohichh/BSUIR_labs/blob/main/sem5/OMIS/diagrams/dev.png)
 
-## Диаграмма направлений развития
+
